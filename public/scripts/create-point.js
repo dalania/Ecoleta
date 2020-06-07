@@ -66,14 +66,12 @@ document
 
      const itemId= itemLi.dataset.id
      
-     //verifica se existe itens selecionados se sim pegar os itens selecionados 
-     // se sim, pegar os itens
+    
         const alreadySelected = selectedItems.findIndex( item =>{
             const itemFound = item == itemId
             return itemFound
         })
 
-     // se já estiver selecionado, tirar da seleção 
      if(alreadySelected >= 0){
          const filteredItems = selectedItems.filter(item => {
              const itemIsDifferent = item != itemId 
@@ -84,11 +82,10 @@ document
          selectedItems = filteredItems
 
      } else{
-         // se não estiver selecionado adicionar a seleção
+        
          selectedItems.push(itemId)
      }
         
      
-     // atualizar o campo escondido com os itens selecionado
-    collectedItems.value = selectedItems
+    
  }
